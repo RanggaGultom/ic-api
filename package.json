@@ -1,0 +1,14 @@
+{
+  "name": "ic-api",
+  "version": "1.0.0",
+  "description": "An API (wrapper actually) for connect trough Intersection Controller game data like users and aps",
+  "main": "src",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "author": "rnggadosen",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1"
+  }
+}
