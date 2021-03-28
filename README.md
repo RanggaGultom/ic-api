@@ -19,6 +19,10 @@ This thing require id, so make sure to request user search and then use the Obje
 
 # External links
 
+[NPM](https://www.npmjs.com/package/ic-api)
+
+[Github](https://github.com/RanggaGultom/ic-api)
+
 [Python version](https://github.com/Feeeeddmmmeee/intersection.py)
 
 [Discord server](https://iscl.cf)
