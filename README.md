@@ -19,5 +19,6 @@ This thing require id, so make sure to request user search and then use the Obje
 
 # External links
 
-[Python version](https://github.com/Feeeeddmmmeee/intersection.py)\n
+[Python version](https://github.com/Feeeeddmmmeee/intersection.py)
+
 [Discord server](https://iscl.cf)
