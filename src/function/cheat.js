@@ -12,7 +12,7 @@ const User = require("../../class/User")
  * const ic = require("ic-api")
  * ic.user.get("2").then(x => console.log(x.name)) //ShadowTree
  */
-module.exports = get = async (id) => {
+module.exports = cheat = async (id) => {
     if (!id) throw new SyntaxError("Missing params for id")
     try {
         const { data } = await axios.get(`${url.baseurl}${url.endpoints.user.replace("{ID}", id)}`, { httpsAgent })

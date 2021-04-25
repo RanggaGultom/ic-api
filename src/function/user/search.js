@@ -12,7 +12,7 @@ const User = require("../../class/User")
  * const ic = require("ic-api")
  * ic.user.search("2").then(x => console.log(x.objectId)) //2
  */
-module.exports = async(username, options = {}) => {
+module.exports = find = async(username, options = {}) => {
     if (!username) throw new SyntaxError("Missing params for username")
     if (options.exactMatch && ( options.exactMatch !== true  && options.exactMatch !== false )) throw new ReferenceError("exactMatch option should filled with boolean")
     if (!options.exactMatch) {

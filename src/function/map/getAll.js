@@ -12,7 +12,7 @@ const _Map = require("../../class/Map")
  * const ic = require("ic-api")
  * ic.map.getAll(1, "day", 1).then(x => console.log(x)) //Array
  */
-module.exports = async (id, query = 50) => {
+module.exports = getAll = async (id, query = 50) => {
     if (!id) throw new SyntaxError("Missing params for id")
     if (parseInt(query) < 1 || parseInt(query) > 50) throw new SyntaxError("Query cannot be below 1 or above 50")
     

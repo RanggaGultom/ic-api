@@ -7,22 +7,18 @@ You can get/search for users, trending maps and other things from the game.
 
 **Before you get into these example, remember this package is using much asynchronomous function**
 
-```js
-const ic = require("ic-api")
-```
-
 ## User search
 ```js
 const ic = require("ic-api")
 ic.user.search("ShadowTree").then(x => console.log(x)) //will return of User
 ```
 
-## Get users map
+## Get user maps
 
 This thing require id, so make sure to request user search and then use the ObjectId to use this function
 ```js
 const ic = require("ic-api")
-ic.map.getAll(userid).then(x => console.log(x)) //will return array of Map
+ic.map.getAll(userid).then(x => console.log(x)) //will return array of Maps
 ```
 
 # External links
@@ -31,6 +27,6 @@ ic.map.getAll(userid).then(x => console.log(x)) //will return array of Map
 
 [Github](https://github.com/RanggaGultom/ic-api)
 
-[Python version](https://github.com/Feeeeddmmmeee/intersection.py)
+[Python version](https://github.com/Feeeeddmmmeee/intersection.py) (Made by [Feeeeddmmmeee](https://github.com/Feeeeddmmmeee))
 
 [Discord server](https://iscl.cf)

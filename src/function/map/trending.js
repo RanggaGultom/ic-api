@@ -15,7 +15,7 @@ const unce = ["day", "week", "month"]
  * const ic = require("ic-api")
  * ic.map.trending(1, "day", 1).then(x => console.log(x)) //Array
  */
-module.exports = async (game, period, type, query = 12) => {
+module.exports = trending = async (game, period, type, query = 12) => {
     if (!game) throw new SyntaxError("Missing params for gamemode")
     if (!period) throw new SyntaxError("Missing params for period")
     if (!type) throw new SyntaxError("Missing params for id")
