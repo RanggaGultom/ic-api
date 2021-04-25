@@ -1,6 +1,6 @@
 {
   "name": "ic-api",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "An API (wrapper actually) for connect trough Intersection Controller game data like users and aps",
   "main": "src",
   "repository": "https://github.com/RanggaGultom/ic-api",

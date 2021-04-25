@@ -1,6 +1,6 @@
 test.js
 package-lock.json
-src/function/user/cheat.js
+src/cheat.js
 src/class/Cheat.js
 
 # Logs
