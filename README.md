@@ -7,18 +7,27 @@ You can get/search for users, trending maps and other things from the game.
 
 **Before you get into these example, remember this package is using much asynchronomous function**
 
-## User search
+## Search a user
 ```js
 const ic = require("ic-api")
-ic.user.search("ShadowTree").then(x => console.log(x)) //will return of User
+ic.user.search("ShadowTree").then(x => console.log(x)) //will return array of Users named ShadowTree
 ```
 
-## Get user maps
-
-This thing require id, so make sure to request user search and then use the ObjectId to use this function
+## Search a map
 ```js
 const ic = require("ic-api")
-ic.map.getAll(userid).then(x => console.log(x)) //will return array of Maps
+ic.map.search(1, "Diverging Diamond").then(x => console.log(x)) //will return array of Maps named Diverging Diamond in simulation mode
+```
+
+## Show map's comments
+So you have to search a map, or anything from Map class. I recommend to use asynchronomous function than spamming ".then" callbacks.
+```js
+const ic = require("ic-api")
+async function getComment() {
+    const map = await ic.map.search(1, "Diverging Diamond") //search map
+    const comments = await map.comments(5) //list a comment, they will come out in array
+    return console.log(coments[4]) //choose one of the array, or do map or whatever you want
+}
 ```
 
 # External links

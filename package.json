@@ -1,8 +1,9 @@
 {
   "name": "ic-api",
-  "version": "1.2.0",
-  "description": "An API (wrapper actually) for connect trough Intersection Controller game data like users and aps",
+  "version": "1.2.1",
+  "description": "An API (wrapper actually) for connect trough Intersection Controller game data like users and maps",
   "main": "src",
+  "keywords": ["intersection","controller","ic","ic-api","intersection controller"],
   "repository": "https://github.com/RanggaGultom/ic-api",
   "scripts": {
     "test": "node test.js"
