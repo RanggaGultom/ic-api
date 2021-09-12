@@ -4,11 +4,11 @@ const httpsAgent = new (require("https").Agent)({
 })
 const url = require("../../data/config")
 const _Map = require("../../class/Map")
-const unce = ["day", "week", "month"]
+const unce = ["day", "week", "month", "alltime"]
 /**
  * See trending maps from any gamemode
  * @param {number} gamemode Gamemode of trending map (1 = SIM | 2 = TC | 3 = MISC)
- * @param {string} period Time period of trending (day | week | month)
+ * @param {string} period Time period of trending (day | week | month | alltime)
  * @param {number} trendingtype Type of trending (1 for normal trending | 2 for "Top New")
  * @returns {Array} Promise of the trending maps
  * @example

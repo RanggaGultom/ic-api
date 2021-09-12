@@ -3,20 +3,22 @@ const httpsAgent = new (require("https").Agent)({
     rejectUnauthorized: false
 })
 const url = require("../../data/config")
-const User = require("../../class/User")
+const _Map = require("../../class/Map")
 /**
- * Get user using the username
- * @param {string} username The user you wanted to search from API
- * @returns {(Array|Void)} Promise of the match users with username you inputted
+ * Get map using the map name
+ * @param {string} mode The mode you wanted to search (1 = SIM | 2 = TC | 3 = MISC)
+ * @param {string} name The map you wanted to search from API
+ * @returns {(Array|Void)} Promise of the match maps with name you inputted
  * @example
  * const ic = require("ic-api")
- * ic.user.search("rnggadosen").then(x => console.log(x)) //Array of matched usernames
+ * ic.map.search("Diverging Diamond").then(x => console.log(x)) //Array of maps with matched name
  */
-module.exports = find = async(username, options = {}) => {
-    if (!username) throw new SyntaxError("Missing params for username")
+module.exports = find = async(mode, name, options = {}) => {
+    if (!mode) throw new SyntaxError("Missing params for game mode")
+    if (!name) throw new SyntaxError("Missing params for name")
     if (options.exactMatch && ( options.exactMatch !== true  && options.exactMatch !== false )) throw new ReferenceError("exactMatch option should filled with boolean")
     if (!options.exactMatch) {
-    let { data:whattheywanted } = await axios.get(`${url.baseurl}${url.endpoints.user_search.replace("{USERNAME}", username)}`, { httpsAgent })
+    let { data:whattheywanted } = await axios.get(`${url.baseurl}${url.endpoints.map_search.replace("{MODE}", mode).replace("{QUERY}", name)}`, { httpsAgent })
     
     /*if (!options.query) options.query = 12
     if (options.query) {
@@ -35,8 +37,8 @@ module.exports = find = async(username, options = {}) => {
     }
     return g
     } else {
-        let { data:whattheywanted } = await axios.get(`${url.baseurl}${url.endpoints.user_search.replace("{USERNAME}", username)}`, { httpsAgent })
-        whattheywanted = whattheywanted.find(x => x.name == username)
+        let { data:whattheywanted } = await axios.get(`${url.baseurl}${url.endpoints.map_search.replace("{QUERY}", name)}`, { httpsAgent })
+        whattheywanted = whattheywanted.find(x => x.name == name)
         if(!whattheywanted) {
             return null
         } else {
